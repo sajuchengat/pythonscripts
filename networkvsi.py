@@ -9,7 +9,7 @@ from collections import defaultdict
 
 def calculate(xyz,nics):
         if xyz[0] == 0 and xyz[1] == 0:
-                print "Lets wait for packets to come to %s, sleeping for 10 seconds" %(nics)
+                print "Lets wait for packets to come to %s" %(nics)
         else:
                 print "The number of packets received for %s in the last 10 seconds are " %(nics.upper())+ str(xyz[2]-xyz[0])
                 print "The number of packets sent from %s in the last 10 seconds are " %(nics.upper())+ str(xyz[3]-xyz[1])
