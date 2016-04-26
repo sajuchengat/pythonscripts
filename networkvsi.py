@@ -28,5 +28,6 @@ while True:
                 vmnics[nics].append(SendPackets)
                 calculate(vmnics[nics],nics)
                 del vmnics[nics][0:2]
-		print "-"*20 +  "Sleeping for 10 seconds" + "-"*20
+	print "-"*20 +  "Sleeping for 10 seconds" + "-"*20
+	print 2*'\n'
         time.sleep(10)
