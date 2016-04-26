@@ -1,5 +1,6 @@
-#Script created to capture the number of TX and RX packets sent through each VMNIC in a esxi box
+#Script created to capture the number of TX and RX packets sent through each VMNIC in a esxi box in every 10 seconds
 #How to run: Copy this script and save it inside esxi. Run the script directly from ESXi
+
 
 
 import vmware.vsi as vsi
@@ -27,5 +28,5 @@ while True:
                 vmnics[nics].append(SendPackets)
                 calculate(vmnics[nics],nics)
                 del vmnics[nics][0:2]
-				print "-"*20 +  "Sleeping for 10 seconds" + "-"*20
+		print "-"*20 +  "Sleeping for 10 seconds" + "-"*20
         time.sleep(10)
