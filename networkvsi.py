@@ -1,3 +1,7 @@
+#Script created to capture the number of TX and RX packets sent through each VMNIC in a esxi box
+#How to run: Copy this script and save it inside esxi. Run the script directly from ESXi
+
+
 import vmware.vsi as vsi
 import time
 from collections import defaultdict
