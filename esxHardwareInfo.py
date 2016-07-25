@@ -19,7 +19,7 @@ def main():
     si = SmartConnect(host=opts.shost,user=opts.username,pwd=opts.password )
     atexit.register(Disconnect, si)
     content=si.RetrieveContent()
-    hostid=si.content.rootFolder.childEntity[0].hostFolder.childEntity[0].host[0] #This works if there is only one datacenter
+    hostid=si.content.rootFolder.childEntity[0].hostFolder.childEntity[0].host[0]  #There are easier way to get this info, but this shows the hierarchy 
     hardware=hostid.hardware
     cpuobj=hardware.cpuPkg[0]
     print 'The CPU vendor is %s and the model is %s'  %(cpuobj.vendor,cpuobj.description)
