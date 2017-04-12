@@ -1,5 +1,6 @@
 # This script can add and remove host from a vc into a datacenter. No support to add/remove from cluster
 #"The arguments need to be -v <VC_IP> -o <add/remove> -s <host_ips > -d <datacenter> -u <vc_username> -p <vc_password> -e <esx_password>
+author__ = 'saju'
 
 from pyVmomi import vim
 from pyVim.connect import SmartConnect, Disconnect
@@ -106,7 +107,6 @@ def main():
         print 'Going to %s host %s from/to VC : %s' % (opts.operation, host, opts.vchost)
         if opts.operation == 'add':
             Add_task = AddHost(host,opts.esxpass,dcref,si)
-            exit()
         elif opts.operation == 'remove':
             RemoveHost(host,si)
         else :
