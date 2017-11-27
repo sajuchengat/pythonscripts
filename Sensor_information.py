@@ -1,3 +1,8 @@
+'''
+Python <scriptname> -d <host_IP> -v <VC_IP> -u <VC_username> -p <VC_Password>
+Python <scriptname> -d <host_IP>  -u <host_username> -p <host_password>
+'''
+
 import argparse
 from pyVmomi import vim
 from pyVim.connect import SmartConnect, Disconnect
